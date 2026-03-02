@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background -->
+  <rect width="32" height="32" rx="7" fill="#1B4332"/>
+  <!-- Tree crown -->
+  <circle cx="16" cy="12" r="8.5" fill="#95D5B2"/>
+  <!-- Tree trunk -->
+  <rect x="14.5" y="19" width="3" height="9" rx="1.5" fill="#74C69D"/>
+</svg>

@@ -7,9 +7,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<div id="scrollProgress" aria-hidden="true"></div>
 
 <!-- ══ NAVBAR ══ -->
 <nav id="navbar">
@@ -60,6 +63,24 @@
     <span>Scroll</span>
   </div>
 </section>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ti">Pertanian</span>
+    <span class="ti">Hortikultura</span>
+    <span class="ti">Tanaman Hias</span>
+    <span class="ti">Produk Natural</span>
+    <span class="ti">Pembuatan Taman</span>
+    <span class="ti">Penjualan Tanaman</span>
+    <span class="ti">Pertanian</span>
+    <span class="ti">Hortikultura</span>
+    <span class="ti">Tanaman Hias</span>
+    <span class="ti">Produk Natural</span>
+    <span class="ti">Pembuatan Taman</span>
+    <span class="ti">Penjualan Tanaman</span>
+  </div>
+</div>
 
 <!-- ══ TENTANG KAMI ══ -->
 <section class="about" id="tentang">
@@ -116,7 +137,7 @@
       <div class="biz-card fade-up">
         <div class="biz-img" style="background-image:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80');background-color:var(--primary-light)"></div>
         <div class="biz-body">
-          <div class="biz-icon">🌾</div>
+          <div class="biz-icon"><i data-lucide="wheat"></i></div>
           <h3>Pertanian</h3>
           <p>Pengembangan sektor pertanian yang inovatif dan berkelanjutan untuk ketahanan pangan dan lingkungan.</p>
         </div>
@@ -125,7 +146,7 @@
       <div class="biz-card fade-up">
         <div class="biz-img" style="background-image:url('https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=600&q=80');background-color:var(--accent)"></div>
         <div class="biz-body">
-          <div class="biz-icon">🌿</div>
+          <div class="biz-icon"><i data-lucide="leaf"></i></div>
           <h3>Produk Natural &amp; Kosmetik</h3>
           <p>Produk kecantikan dan aksesoris berbahan dasar alami — aman, berkelanjutan, dan berkualitas tinggi.</p>
         </div>
@@ -134,16 +155,16 @@
       <div class="biz-card fade-up">
         <div class="biz-img" style="background-image:url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=600&q=80');background-color:var(--primary)"></div>
         <div class="biz-body">
-          <div class="biz-icon">🪴</div>
+          <div class="biz-icon"><i data-lucide="flower-2"></i></div>
           <h3>Hortikultura</h3>
           <p>Budidaya dan pengembangan tanaman hortikultura berkualitas tinggi dengan metode modern dan berkelanjutan.</p>
         </div>
       </div>
 
       <div class="biz-card fade-up">
-        <div class="biz-img" style="background-image:url('https://images.unsplash.com/photo-1545165375-bf1d8c42a1ae?auto=format&fit=crop&w=600&q=80');background-color:var(--accent)"></div>
+        <div class="biz-img" style="background-image:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80');background-color:var(--accent)"></div>
         <div class="biz-body">
-          <div class="biz-icon">🌺</div>
+          <div class="biz-icon"><i data-lucide="flower"></i></div>
           <h3>Tanaman Hias</h3>
           <p>Koleksi tanaman hias indoor &amp; outdoor dari berbagai spesies lokal dan impor pilihan terbaik.</p>
         </div>
@@ -152,7 +173,7 @@
       <div class="biz-card fade-up">
         <div class="biz-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80');background-color:var(--primary-light)"></div>
         <div class="biz-body">
-          <div class="biz-icon">🌳</div>
+          <div class="biz-icon"><i data-lucide="tree-pine"></i></div>
           <h3>Pembuatan &amp; Perawatan Taman</h3>
           <p>Jasa desain, pembuatan, dan perawatan taman profesional untuk hunian maupun komersial.</p>
         </div>
@@ -161,7 +182,7 @@
       <div class="biz-card fade-up">
         <div class="biz-img" style="background-image:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80');background-color:var(--primary)"></div>
         <div class="biz-body">
-          <div class="biz-icon">🛒</div>
+          <div class="biz-icon"><i data-lucide="shopping-basket"></i></div>
           <h3>Penjualan Tanaman</h3>
           <p>Penjualan tanaman melalui offline store, online shop, dan popup market di berbagai kota.</p>
         </div>
@@ -189,8 +210,8 @@
           <h3 class="brand-name">Chloro Corner</h3>
           <p class="brand-desc">Plant shop dengan koleksi tanaman hias indoor &amp; outdoor pilihan terbaik. Tersedia di offline store dan online shop.</p>
           <div class="brand-links">
-            <a href="https://chlorocorner.com" class="brand-link" target="_blank" rel="noopener">🌐 chlorocorner.com</a>
-            <a href="https://instagram.com/chloro_corner" class="brand-link" target="_blank" rel="noopener">📷 @chloro_corner</a>
+            <a href="https://chlorocorner.com" class="brand-link" target="_blank" rel="noopener"><i data-lucide="globe"></i> chlorocorner.com</a>
+            <a href="https://instagram.com/chloro_corner" class="brand-link" target="_blank" rel="noopener"><i data-lucide="instagram"></i> @chloro_corner</a>
           </div>
         </div>
       </div>
@@ -202,31 +223,31 @@
           <h3 class="brand-name">Hoya Corner</h3>
           <p class="brand-desc">Spesialis tanaman Hoya dengan berbagai spesies dari Indonesia dan impor. Surga bagi para kolektor Hoya.</p>
           <div class="brand-links">
-            <span class="brand-link muted">📷 Instagram — segera hadir</span>
+            <span class="brand-link muted"><i data-lucide="instagram"></i> Instagram — segera hadir</span>
           </div>
         </div>
       </div>
 
       <div class="brand-card fade-up">
-        <div class="brand-img" style="background-image:url('https://images.unsplash.com/photo-1572037820659-e3cebf2b4e64?auto=format&fit=crop&w=600&q=80');background-color:var(--primary)"></div>
+        <div class="brand-img" style="background-image:url('https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=600&q=80');background-color:var(--primary)"></div>
         <div class="brand-body">
           <span class="brand-tag-label">Tanaman Paku</span>
           <h3 class="brand-name">Fernation</h3>
           <p class="brand-desc">Plant shop khusus tanaman paku-pakuan (fern). Koleksi lengkap berbagai jenis fern untuk memperkaya koleksi hijau Anda.</p>
           <div class="brand-links">
-            <span class="brand-link muted">📷 Instagram — segera hadir</span>
+            <span class="brand-link muted"><i data-lucide="instagram"></i> Instagram — segera hadir</span>
           </div>
         </div>
       </div>
 
       <div class="brand-card fade-up">
-        <div class="brand-img" style="background-image:url('https://images.unsplash.com/photo-1617940808493-89d0d6b39bef?auto=format&fit=crop&w=600&q=80');background-color:var(--accent)"></div>
+        <div class="brand-img" style="background-image:url('https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=600&q=80');background-color:var(--accent)"></div>
         <div class="brand-body">
           <span class="brand-tag-label">Natural Beauty</span>
           <h3 class="brand-name">Calmolea</h3>
           <p class="brand-desc">Brand produk natural — dari aksesoris hingga kosmetik berbahan alami. Keindahan dari alam untuk keseharian Anda.</p>
           <div class="brand-links">
-            <span class="brand-link muted">📷 Instagram — segera hadir</span>
+            <span class="brand-link muted"><i data-lucide="instagram"></i> Instagram — segera hadir</span>
           </div>
         </div>
       </div>
@@ -245,22 +266,22 @@
     </div>
     <div class="why-grid">
       <div class="why-card fade-up">
-        <span class="why-icon">🏪</span>
+        <span class="why-icon"><i data-lucide="store"></i></span>
         <h3>Offline &amp; Online</h3>
         <p>Kunjungi langsung toko fisik kami atau belanja nyaman dari mana saja secara online.</p>
       </div>
       <div class="why-card fade-up">
-        <span class="why-icon">🌱</span>
+        <span class="why-icon"><i data-lucide="sprout"></i></span>
         <h3>Koleksi Lengkap</h3>
         <p>Beragam spesies tanaman lokal dan impor, dari yang populer hingga langka dan eksklusif.</p>
       </div>
       <div class="why-card fade-up">
-        <span class="why-icon">👥</span>
+        <span class="why-icon"><i data-lucide="users"></i></span>
         <h3>Tim Profesional</h3>
         <p>Didukung tim berpengalaman di bidang hortikultura, landscaping, dan tanaman hias.</p>
       </div>
       <div class="why-card fade-up">
-        <span class="why-icon">🌿</span>
+        <span class="why-icon"><i data-lucide="leaf"></i></span>
         <h3>Produk Natural</h3>
         <p>Lini produk kosmetik dan aksesoris berbahan alami yang aman, ramah lingkungan, dan berkualitas.</p>
       </div>
@@ -313,28 +334,28 @@
         <h3 class="contact-info-title">Informasi Kontak</h3>
 
         <div class="contact-item">
-          <div class="contact-icon">📍</div>
+          <div class="contact-icon"><i data-lucide="map-pin"></i></div>
           <div>
             <div class="lbl">Alamat Toko</div>
             <div class="val">Segera diperbarui</div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">📞</div>
+          <div class="contact-icon"><i data-lucide="phone"></i></div>
           <div>
             <div class="lbl">Telepon / WhatsApp</div>
             <div class="val">Segera diperbarui</div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">✉️</div>
+          <div class="contact-icon"><i data-lucide="mail"></i></div>
           <div>
             <div class="lbl">Email</div>
             <div class="val">Segera diperbarui</div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">🕐</div>
+          <div class="contact-icon"><i data-lucide="clock"></i></div>
           <div>
             <div class="lbl">Jam Operasional</div>
             <div class="val">Segera diperbarui</div>
@@ -342,7 +363,7 @@
         </div>
 
         <div class="map-placeholder">
-          <div class="map-ico">🗺️</div>
+          <div class="map-ico"><i data-lucide="map"></i></div>
           <h4>Lokasi Toko</h4>
           <p>Segera Hadir</p>
         </div>
@@ -380,9 +401,9 @@
         <a href="#" class="footer-logo">CV Pohon <span>Besar</span></a>
         <p>Dari kebun ke kehidupan Anda. Menghadirkan tanaman hias, produk natural, dan solusi hijau untuk ruang dan gaya hidup Anda.</p>
         <div class="footer-socials">
-          <a href="#" class="social-btn" title="Instagram" aria-label="Instagram">📷</a>
-          <a href="#" class="social-btn" title="WhatsApp" aria-label="WhatsApp">💬</a>
-          <a href="#" class="social-btn" title="Email" aria-label="Email">✉️</a>
+          <a href="#" class="social-btn" title="Instagram" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" class="social-btn" title="WhatsApp" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+          <a href="#" class="social-btn" title="Email" aria-label="Email"><i data-lucide="mail"></i></a>
         </div>
       </div>
 
@@ -416,6 +437,7 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

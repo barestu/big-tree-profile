@@ -761,3 +761,169 @@
       .hero-actions { flex-direction: column; }
       .contact-form { padding: 28px 20px; }
     }
+
+    /* ══════════════════════════════════════
+       UI ENHANCEMENTS
+    ══════════════════════════════════════ */
+
+    /* ── Scroll progress bar ── */
+    #scrollProgress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent-light), #74C69D, var(--accent-light));
+      background-size: 200% 100%;
+      z-index: 2001;
+      transition: width .08s linear;
+      pointer-events: none;
+    }
+
+    /* ── Ticker band ── */
+    .ticker {
+      background: var(--primary);
+      overflow: hidden;
+      padding: 15px 0;
+      border-top: 1px solid rgba(149,213,178,.1);
+      border-bottom: 1px solid rgba(149,213,178,.1);
+    }
+    .ticker:hover .ticker-track { animation-play-state: paused; }
+    .ticker-track {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      animation: tickerScroll 32s linear infinite;
+    }
+    .ti {
+      display: inline-flex;
+      align-items: center;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(149,213,178,.5);
+      padding: 0 38px;
+    }
+    .ti::after {
+      content: '◆';
+      font-size: 4px;
+      margin-left: 38px;
+      color: rgba(149,213,178,.18);
+    }
+    @keyframes tickerScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ── Hero entrance animations ── */
+    @keyframes heroReveal {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-pill    { animation: heroReveal  .9s cubic-bezier(.16,1,.3,1) both .08s; }
+    .hero h1      { animation: heroReveal 1.05s cubic-bezier(.16,1,.3,1) both .28s; }
+    .hero-sub     { animation: heroReveal 1.05s cubic-bezier(.16,1,.3,1) both .48s; }
+    .hero-actions { animation: heroReveal 1.05s cubic-bezier(.16,1,.3,1) both .68s; }
+    .hero-scroll  { animation: heroReveal 1.05s cubic-bezier(.16,1,.3,1) both .92s; }
+
+    /* ── Nav: backdrop blur on scroll ── */
+    nav.scrolled {
+      background: rgba(27,67,50,.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    /* ── Nav active state ── */
+    .nav-links a.active { color: var(--accent-light); }
+
+    /* ── Section-tag dot decoration ── */
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .section-tag::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: .65;
+      flex-shrink: 0;
+    }
+
+    /* ── Card image zoom on hover ── */
+    .biz-img {
+      transition: transform .6s cubic-bezier(.16,1,.3,1);
+      will-change: transform;
+    }
+    .biz-card:hover .biz-img { transform: scale(1.07); }
+
+    .brand-img {
+      transition: transform .6s cubic-bezier(.16,1,.3,1);
+      will-change: transform;
+    }
+    .brand-card:hover .brand-img { transform: scale(1.06); }
+
+    /* ── About badge float ── */
+    .about-badge {
+      animation: badgeFloat 4.5s ease-in-out infinite;
+    }
+    @keyframes badgeFloat {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-7px); }
+    }
+
+    /* ── Team avatar pulse ring ── */
+    .team-avatar::after {
+      animation: avatarPulse 3.5s ease-in-out infinite;
+    }
+    @keyframes avatarPulse {
+      0%,100% { opacity: .28; transform: scale(1); }
+      50%      { opacity: .6;  transform: scale(1.06); }
+    }
+
+    /* ── Lucide icon sizing ── */
+    .biz-icon svg {
+      width: 1.4rem; height: 1.4rem;
+      stroke: var(--primary);
+      stroke-width: 1.75;
+    }
+    .why-icon svg {
+      width: 1.75rem; height: 1.75rem;
+      stroke: var(--accent-light);
+      stroke-width: 1.75;
+    }
+    .contact-icon svg {
+      width: 1.2rem; height: 1.2rem;
+      stroke: var(--accent);
+      stroke-width: 2;
+    }
+    .map-ico svg {
+      width: 2rem; height: 2rem;
+      stroke: var(--accent);
+      stroke-width: 1.5;
+    }
+    .brand-link svg {
+      width: .85rem; height: .85rem;
+      stroke: currentColor;
+      stroke-width: 2;
+      flex-shrink: 0;
+    }
+    .social-btn svg {
+      width: 1rem; height: 1rem;
+      stroke: currentColor;
+      stroke-width: 2;
+    }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      .hero-pill, .hero h1, .hero-sub, .hero-actions, .hero-scroll {
+        animation: none; opacity: 1; transform: none;
+      }
+      .ticker-track      { animation: none; }
+      .hero-scroll-line  { animation: none; }
+      .team-avatar::after { animation: none; }
+      .about-badge        { animation: none; }
+      .biz-img, .brand-img { transition: none; }
+      .fade-up { transition-duration: 0s; }
+    }
