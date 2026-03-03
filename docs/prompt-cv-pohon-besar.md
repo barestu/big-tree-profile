@@ -133,7 +133,7 @@ Hijau tua sebagai warna dominan, cream sebagai kontras utama. Palette terasa *ea
 
 ---
 
-**b. Hoya Corner**
+**b. Pallava Hoya**
 > Spesialis tanaman Hoya dengan berbagai spesies dari Indonesia dan impor. Surga bagi para kolektor Hoya.
 
 - Instagram: [akan diperbarui]
